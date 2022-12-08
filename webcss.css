@@ -1,0 +1,31 @@
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.signin-box {
+    width: 600px;
+    border: 3px solid white;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
