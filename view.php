@@ -90,10 +90,7 @@ if (!isset ($_SESSION["username"])){
                         <span class="las la-heart"></span>
                     </div>
                 </div>
-            </div>
 
-
-            <div class="cards">
                 <div class="card-single">
                     <div>
                         <h1>11</h1>
@@ -103,9 +100,7 @@ if (!isset ($_SESSION["username"])){
                         <span class="las la-users"></span>
                     </div>
                 </div>
-            </div>
 
-            <div class="cards">
                 <div class="card-single">
                     <div>
                         <h1>3</h1>
@@ -116,6 +111,8 @@ if (!isset ($_SESSION["username"])){
                     </div>
                 </div>
             </div>
+
+            
             
             <div class="recent-grid">
                 <div class="projects">
