@@ -104,7 +104,7 @@
     height: 100%;
     background: var(--main-color);
     z-index: 100%;
-
+	transition: width 300ms;
 }
 
 .sidebar-brand {
@@ -122,6 +122,10 @@
     width: 100%;
     margin-bottom: 1.7rem;
     padding-left: 2rem;
+}
+
+.sidebar-menu ul {
+    margin-left: -40px;
 }
 
 .sidebar-menu a {
@@ -143,11 +147,51 @@
     padding-right: 1rem;
 }
 
+.recent-grid {
+	margin-top: 60px;
+}
+
+#nav-toggle:checked + .sidebar {
+	width: 90px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand,
+#nav-toggle:checked + .sidebar li {
+	padding-left: 1rem;
+	text-align:center;
+}
+
+#nav-toggle:checked + .sidebar li a{
+	padding-left: 0rem;
+}
+
+
+#nav-toggle:checked + .sidebar .sidebar-brand h1 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child {
+	display: none;
+}
+
+#nav-toggle:checked ~ .main-content {
+	margin-left: 90px;
+}
+
+#nav-toggle:checked ~ .main-content header {
+	width: calc(100% - 90px);
+	left: 90px;
+}
+
+#nav-toggle:checked ~ .continue-card button {
+	width: calc(100% + 90px);
+	left: 90px;
+}
+
 .main-content {
+	transition: margin-left 300ms;
     margin-left: 345px;
 }
 
 header {
+	background: #fff;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -157,6 +201,7 @@ header {
     width: calc(100% - 345px);
     top: 0;
     z-index: 100;
+	transition: left 300ms;
 }
 
 header h2 {
@@ -191,6 +236,7 @@ main {
 }
 
 .cards {
+	margin-left: 250px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
@@ -221,4 +267,84 @@ main {
 .card-single:last-child div:last-child span,
 .card-single:last-child div:first-child span {
     color: #fff;
+}
+
+
+.card {
+	background: #fff;
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button {
+	background: var(--main-color);
+	border-radius: 10px;
+	color: #fff;
+	font-size: .8rem;
+	padding: .5rem;
+	border: 1px solid var(--main-color);
+}
+
+.continue-card button {
+	margin-left: 200px;
+	height: 100px;
+	width: 700px;
+
+	display: grid;
+	text-align: auto;
+	vertical-align: auto;
+	background: var(--main-color);
+	margin-top: 10px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 2rem;
+	padding: .7rem;
+	border: 1px solid var(--main-color);
+}
+
+.card-header,
+.card-body {
+	padding: 1rem;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+@media only screen and (max-width: 1200px) {
+	.sidebar {
+		width: 90px;
+	}
+	
+	.sidebar .sidebar-brand,
+	.sidebar li {
+		padding-left: 1rem;
+		text-align:center;
+	}
+	
+	.sidebar li a{
+		padding-left: 0rem;
+	}
+	
+	
+	.sidebar .sidebar-brand h1 span:last-child,
+	.sidebar li a span:last-child {
+		display: none;
+	}
+	
+	.main-content {
+		margin-left: 90px;
+	}
+	
+	.main-content header {
+		width: calc(100% - 90px);
+		left: 90px;
+	}
+	
 }

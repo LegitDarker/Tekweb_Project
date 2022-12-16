@@ -36,7 +36,7 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="chapterList.php"><span class="las la-book-open"> </span>
+                    <a href="view_chapter.php"><span class="las la-book-open"> </span>
                     <span>Chapter List</span>
                     </a>
                 </li>
@@ -72,7 +72,7 @@ if (!isset ($_SESSION["username"])){
             </h1>
 
             <div class="user-wrapper">
-                <img src="img/User/user.png" width="40px" height="40px" alt="">
+                <img src="Image files/User/user.png" width="40px" height="40px" alt="">
                 <div>
                     <h4><?php echo  $_SESSION["username"]; ?></h4>
                     <small>User</small>
