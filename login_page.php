@@ -7,6 +7,8 @@ if (isset($_POST['buttonlogin'])) {
     $row = mysqli_fetch_array($sql);
     if(is_array($row))
     {
+        $_SESSION['username']=$row['username'];
+        $_SESSION["password"]=$row['password'];
         echo "view.php";
     }
     else
@@ -35,7 +37,7 @@ if (isset($_POST['buttonlogin'])) {
 <body>
     <div class="wrapper">
             <video autoplay loop muted plays-inline class="back-video">
-            <source src="Image files/sign.mp4" type="video/mp4">
+            <source src="Image img/sign.mp4" type="video/mp4">
             </video>
 
             <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black;">

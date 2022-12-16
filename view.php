@@ -2,7 +2,7 @@
 session_start();
 require "connection.php";
 if (!isset ($_SESSION["username"])){
-    header("location: login.php");
+    header("location: login_page.php");
 }
 ?>
 
