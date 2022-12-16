@@ -37,28 +37,25 @@ if (isset($_POST['buttonlogin'])) {
     <div class="wrapper">
         <video autoplay loop muted plays-inline class="back-video">
             <source src="Image files/sign.mp4" type="video/mp4">
-        </video>
+            </video>
 
-        <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black;">
-            <h2>Login</h2>
-            <p class="hint-text">Enter login details</p>
-            <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username">
-                <div id="emailHelp" class="form-text"> 
-                    We'll never share your login details with anyone
+            <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black;">
+                <h2>Login</h2>
+                <p class="hint-text">Enter login details</p>
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                    <div id="emailHelp" class="form-text"> 
+                        We'll never share your login details with anyone
+                    </div>
                 </div>
-            </div>
 
-            <div class="mb-3">
-                <label class="exampleInputPassword1" class="form-label">
-                    Password
-                </label>
-                <input type="password" class="form-control" id="password" name="password">
-                <div id="error" style="color: red;"></div>
-               <!--  <form action="view.php">
+                <div class="mb-3">
+                    <label class="exampleInputPassword1" class="form-label">
+                        Password
+                    </label>
+                    <input type="password" class="form-control" id="password" name="password">
                     <div id="error" style="color: red;"></div>
-                </form> -->
             </div>
 
             <div class="form-group">
