@@ -34,7 +34,7 @@ if (isset($_POST['buttonlogin'])) {
 </head>
 <body>
     <div class="wrapper">
-        <video autoplay loop muted plays-inline class="back-video">
+            <video autoplay loop muted plays-inline class="back-video">
             <source src="Image files/sign.mp4" type="video/mp4">
             </video>
 

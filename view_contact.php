@@ -30,7 +30,7 @@ if (!isset ($_SESSION["username"])){
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="" class="active"><span class="lab la-mizuni"> </span>
+                    <a href="view.php"><span class="lab la-mizuni"> </span>
                     <span>General</span>
                     </a>
                 </li>
@@ -48,13 +48,13 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_contact.php"><span class="las la-address-book"> </span>
+                    <a href="" class="active"><span class="las la-address-book"> </span>
                     <span>Contact Us</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="view_account.php"><span class="las la-user-alt"> </span>
+                    <a href="view_account"><span class="las la-user-alt"> </span>
                     <span>Account</span>
                     </a>
                 </li>
@@ -81,54 +81,6 @@ if (!isset ($_SESSION["username"])){
         </header>
 
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>21</h1>
-                        <span>Likes</span>
-                    </div>
-                    <div>
-                        <span class="las la-heart"></span>
-                    </div>
-                </div>
-
-                <div class="card-single">
-                    <div>
-                        <h1>11</h1>
-                        <span>Comments</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-                </div>
-
-                <div class="card-single">
-                    <div>
-                        <h1>3</h1>
-                        <span>Chapters read</span>
-                    </div>
-                    <div>
-                        <span class="las la-book-open"></span>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-            <div class="recent-grid" style="margin-bottom: -23px">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Recent Read Chapter</h2>
-
-                        <button>See all</button>
-                    </div>
-
-                    <div class="continue-card">
-                        <button>Continue!</button>
-                    </div>
-                </div>
-            </div>
-
         </main>
     </div>
 
