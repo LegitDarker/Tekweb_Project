@@ -115,9 +115,25 @@ if (!isset ($_SESSION["username"])){
                         <span class="las la-book-open"></span>
                     </div>
                 </div>
-            </div>   
+            </div>
+            
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Recent chapter read</h2>
+
+                            <button>Recent chapter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
+
+
+
     <div class="background">
     </div>
 
