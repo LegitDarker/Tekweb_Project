@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'connection.php';
-if (isset($_POST['username']))
+if (isset($_POST['save']))
 {
     $username=$_POST['username'];
     $password=$_POST['password'];
