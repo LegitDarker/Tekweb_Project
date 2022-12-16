@@ -7,7 +7,6 @@ if (isset($_POST['buttonlogin'])) {
     $row = mysqli_fetch_array($sql);
     if(is_array($row))
     {
-        // header("Location: view.php");
         echo "view.php";
     }
     else
