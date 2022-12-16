@@ -2,22 +2,21 @@
 session_start();
 require "connection.php";
 if (!isset ($_SESSION["username"])){
-    header("location: login.php");
+	header("location: login.php");
 }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="webcss.css">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="webcss.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 
-<body>
 <body>
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -61,7 +60,7 @@ if (!isset ($_SESSION["username"])){
         </div>
     </div>
 
-<div class="main-content">
+    <div class="main-content">
         <header>
             <h1>
                 <label for="">
@@ -115,51 +114,14 @@ if (!isset ($_SESSION["username"])){
                         <span class="las la-book-open"></span>
                     </div>
                 </div>
-            </div>   
+            </div>
+                
         </main>
+
+
+        
     </div>
-    <div class="background">
-    </div>
-
-
-    <div class="bubbles">
-        <span style="--i:11;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:14;"></span>
-        <span style="--i:23;"></span>
-        <span style="--i:18;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:19;"></span>
-        <span style="--i:20;"></span>
-        <span style="--i:22;"></span>
-        <span style="--i:25;"></span>
-        <span style="--i:18;"></span>
-        <span style="--i:21;"></span>
-        <span style="--i:15;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:26;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:28;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:19;"></span>
-        <span style="--i:25;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:25;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:11;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:19;"></span>
-
-
-
-
-    </div>
-
 
 </body>
+
+
