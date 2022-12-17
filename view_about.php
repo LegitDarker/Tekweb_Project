@@ -13,6 +13,7 @@ if (!isset ($_SESSION["username"])){
     <link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="webcss.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -43,7 +44,7 @@ if (!isset ($_SESSION["username"])){
 
                 <li>
                     <a href="view_chat.php"><span class="lab la-rocketchat"> </span>
-                    <span>Chat</span>
+                    <span>Chat Author</span>
                     </a>
                 </li>
 
@@ -72,7 +73,7 @@ if (!isset ($_SESSION["username"])){
             </h1>
 
             <div class="user-wrapper">
-                <img src="Image files/User/user.png" width="40px" height="40px" alt="">
+                <img src="img/User/user.png" width="40px" height="40px" alt="">
                 <div>
                     <h4><?php echo  $_SESSION["username"]; ?></h4>
                     <small>User</small>
@@ -81,6 +82,33 @@ if (!isset ($_SESSION["username"])){
         </header>
 
         <main>
+            <div class="card-display">
+                <div class="content-section">
+                    <div class="title">
+                        <h1>About Us</h1>
+                    </div>
+
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quae animi doloribus,
+                            architecto aut ducimus maiores quisquam nostrum 
+                            officia aliquid, magni in fuga nisi. Deserunt fugiat animi quia ex officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora ipsum eaque, 
+                            molestias officiis culpa veritatis, sapiente tenetur quo incidunt omnis doloremque iusto 
+                            cum nesciunt unde dicta necessitatibus voluptate expedita.</p>
+                    </div>
+
+                    <div class="social">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="image-section">
+                    <img src="img\man.jpg">
+                </div>
+            <div>
+
         </main>
     </div>
 

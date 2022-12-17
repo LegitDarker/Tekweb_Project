@@ -43,7 +43,7 @@ if (!isset ($_SESSION["username"])){
 
                 <li>
                     <a href="view_chat.php"><span class="lab la-rocketchat"> </span>
-                    <span>Chat</span>
+                    <span>Chat Author</span>
                     </a>
                 </li>
 
