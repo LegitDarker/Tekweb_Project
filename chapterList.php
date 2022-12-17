@@ -125,79 +125,84 @@ if (!isset ($_SESSION["username"])){
             </div>
         </div>
     </header>
-
-    <div id="logo">
-        <img id="img1" src="img/eps5/Comic5_041.jpg">
-        <table class="table table-sm table-dark" id="table">
-        <tbody>
-        <tr>
-            <td>Judul</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Status</td>
-            <td>Thornton</td>
-        </tr>
-        <tr>
-            <td>Pengarang</td>
-            <td>Daniel</td>
-        </tr>
-        <tr>
-            <td>
-                Ilustrator/td>
-                <td>Daniel</td>
-            </tr>
-            <tr>
-                <td>Status</td>
-                <td>Ongoing</td>
-            </tr>
-            <tr>
-                <td>Grafis</td>
-                <td>Shounen?</td>
-            </tr>
-            <tr>
-                <td>Tema</td>
-                <td>Action?</td>
-            </tr>
-            <tr>
-                <td>Jenis Komik</td>
-                <td>?</td>
-            </tr>
+    
+    
+        <div id="logo">
+            <img id="img1" src="img/eps5/Comic5_041.jpg">
+            <table class="table table-sm table-dark" id="table">
+            <tbody>
+                <tr>
+                    <td>Judul</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Thornton</td>
+                </tr>
+                <tr>
+                    <td>Pengarang</td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>Ilustrator</td>
+                    <td>Daniel</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Ongoing</td>
+                </tr>
+                <tr>
+                    <td>Grafis</td>
+                    <td>Shounen?</td>
+                </tr>
+                <tr>
+                    <td>Tema</td>
+                    <td>Action?</td>
+                </tr>
+                <tr>
+                    <td>Jenis Komik</td>
+                    <td>?</td>
+                </tr>
             </tbody>
             </table>
+
         </div>
 
         <div class="content2">
             <div class="container2">
-            <div class="buttonTop">
-            <button type="button" class="btn btn-outline-primary" id="button1"><h4>Chapter Awal</h4>
-                <h2>Chapter 01</h2></button>
+                <div class="buttonTop">
+                    <button type="button" class="btn btn-outline-primary" id="button1"><h4>Chapter Awal</h4>
+                        <h2>Chapter 01</h2></button>
+                </div>
+
+                <button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
+                <h2>Chapter 14</h2></button>
+            </div>
         </div>
-        <button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
-            <h2>Chapter 14</h2></button>
-    </div>
-</div>
-<div class="tableComic">
-    <table class="table table-hover table-dark">
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td id="eps">Episode1</td>
-      <td>btn</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td id="eps">Jacob</td>
-      <td>btn</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td id="eps">Larry the Bird</td>
-      <td>btn</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+
+
+        <div class="tableComic">
+            <table class="table table-hover table-dark">
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td id="eps">Episode1</td>
+                    <td>btn</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td id="eps">Jacob</td>
+                    <td>btn</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td id="eps">Larry the Bird</td>
+                    <td>btn</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    
 </div>
 
 </div>
