@@ -4,6 +4,9 @@ require "connection.php";
 if (!isset ($_SESSION["username"])){
     header("location: login_page.php");
 }
+// if (isset($_POST['buttonusername'])) {
+//     // code...
+// }
 ?>
 
 <!DOCTYPE html>
@@ -85,18 +88,25 @@ if (!isset ($_SESSION["username"])){
                 <a href="setImage.php">
                     <div class="card-body">
                         <img class="card-img-top" src="img/User/user.png" alt="Card image cap" style="height: 200px; width: 200px; margin-left: 300px;">
-                        <h5 class="card-title">Set Image</h5>
+                        <h5 class="card-title" style="color: black;">Set Image</h5>
                     </div>
                 </a>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <a href="setUsername.php">
+                        <li class="list-group-item">Username
+                            <h3><?php echo $_SESSION["username"]; ?></h3></li>
+                    </a>
+                    <a href="setEmail.php">
+                        <li class="list-group-item">Email
+                            <h3><?php echo $_SESSION["email"]; ?></h3></li>
+                    </a>
+                    <a href="setPassword.php">
+                        <li class="list-group-item">Set New Password</li>
+                    </a><br>
+                    <button>
+                        <a class="nav-link active" href="logout.php"><h3>Logout</h3></a>
+                    </button>
                 </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
             </div>
 
         </main>
@@ -147,5 +157,5 @@ if (!isset ($_SESSION["username"])){
 
     </div>
 
-
 </body>
+</html>

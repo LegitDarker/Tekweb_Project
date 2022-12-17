@@ -10,6 +10,7 @@ if (isset($_POST['buttonlogin'])) {
     {
         $_SESSION['username']=$row['username'];
         $_SESSION["password"]=$row['password'];
+        $_SESSION['email']=$row['email'];
         echo "view.php";
     }
     else
