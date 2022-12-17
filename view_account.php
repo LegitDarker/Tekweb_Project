@@ -98,7 +98,7 @@ if (!isset ($_SESSION["username"])){
                             <h3><?php echo $_SESSION["email"]; ?></h3></li>
                     </a>
                     <a href="set_password.php">
-                        <li class="list-group-item">Set New Password</li>
+                        <li class="list-group-item">Change Password</li>
                     </a><br>
                     <button>
                         <a class="nav-link active" href="logout.php"><h3>Logout</h3></a>
