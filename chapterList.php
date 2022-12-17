@@ -1,3 +1,12 @@
+<?php
+session_start();
+require "connection.php";
+if (!isset ($_SESSION["username"])){
+    header("location: login_page.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,17 +91,17 @@
                 </a>
             </li>
             <li>
-                <a href=""><span class="lab la-rocketchat"></span>
+                <a href="view_chat.php"><span class="lab la-rocketchat"></span>
                 <span>Chat</span>
                 </a>
             </li>
             <li>
-                <a href=""><span class="las la-address-book"></span>
+                <a href="view_contact.php"><span class="las la-address-book"></span>
                 <span>Contact Us</span>
                 </a>
             </li>
             <li>
-                <a href=""><span class="las la-user-alt"></span>
+                <a href="view_account.php"><span class="las la-user-alt"></span>
                 <span>Account</span>
                 </a>
             </li>
@@ -100,6 +109,23 @@
     </div>
 </div>
 <div class="main-content">
+    <header>
+        <h1>
+            <label for="nav-toggle">
+                <span class="las la-bars"></span>
+            </label>
+            General
+        </h1>
+
+        <div class="user-wrapper">
+            <img src="img/User/user.png" width="40px" height="40px" alt="">
+            <div>
+                <h4><?php echo  $_SESSION["username"]; ?></h4>
+                <small>User</small>
+            </div>
+        </div>
+    </header>
+
     <div id="logo">
         <img id="img1" src="img/eps5/Comic5_041.jpg">
         <table class="table table-sm table-dark" id="table">

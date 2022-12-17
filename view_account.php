@@ -36,7 +36,7 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_chapter.php"><span class="las la-book-open"> </span>
+                    <a href="chapterList.php"><span class="las la-book-open"> </span>
                     <span>Chapter List</span>
                     </a>
                 </li>

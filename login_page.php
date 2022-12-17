@@ -36,9 +36,11 @@ if (isset($_POST['buttonlogin'])) {
 </head>
 <body>
     <div class="wrapper">
+            <div style="background:linear-gradient(to right,rgba(0, 255, 255, 0.4),rgba(0, 255, 166, 0.3));">
             <video autoplay loop muted plays-inline class="back-video">
-            <source src="img/sign.mp4" type="video/mp4">
+                <source src="img/sign.mp4" type="video/mp4">
             </video>
+            </div>
 
             <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black;">
                 <h2>Login</h2>
