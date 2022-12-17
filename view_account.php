@@ -4,9 +4,6 @@ require "connection.php";
 if (!isset ($_SESSION["username"])){
     header("location: login_page.php");
 }
-// if (isset($_POST['buttonusername'])) {
-//     // code...
-// }
 ?>
 
 <!DOCTYPE html>
@@ -85,22 +82,22 @@ if (!isset ($_SESSION["username"])){
 
         <main>
             <div class="card" style="padding: 50px;">
-                <a href="setImage.php">
+                <a href="set_image.php">
                     <div class="card-body">
                         <img class="card-img-top" src="img/User/user.png" alt="Card image cap" style="height: 200px; width: 200px; margin-left: 300px;">
                         <h5 class="card-title" style="color: black;">Set Image</h5>
                     </div>
                 </a>
                 <ul class="list-group list-group-flush">
-                    <a href="setUsername.php">
+                    <a href="set_username.php">
                         <li class="list-group-item">Username
                             <h3><?php echo $_SESSION["username"]; ?></h3></li>
                     </a>
-                    <a href="setEmail.php">
+                    <a href="set_email.php">
                         <li class="list-group-item">Email
                             <h3><?php echo $_SESSION["email"]; ?></h3></li>
                     </a>
-                    <a href="setPassword.php">
+                    <a href="set_password.php">
                         <li class="list-group-item">Set New Password</li>
                     </a><br>
                     <button>
