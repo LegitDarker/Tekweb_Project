@@ -16,7 +16,8 @@
             <source src="Img/sign.mp4" type="video/mp4">
         </video>
 
-        <form action="register_account.php" method="post" class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black;">
+        <form action="register_account.php" method="post" class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; 
+        background: black; opacity: 70%">
             <h2>Sign up</h2>
             <p>Please fill this form to create an account.</p>
 
