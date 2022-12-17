@@ -51,7 +51,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -1;
+	z-index: -1;
 }
 
 .signin-box {
@@ -65,18 +65,18 @@
     margin-right: auto;
 }
 
-@media (min-aspect-ratio: 16/9){
-    .back-video{
-        width: 100%;
-        height: auto;
-    }
+@media(min-aspect-ratio: 16/9) {
+	.back-video {
+		width: 100%;
+		height: auto;
+	}
 }
 
-@media (max-aspect-ratio: 16/9){
-    .back-video{
-        width: auto;
-        height: 100%;
-    }
+@media(max-aspect-ratio: 16/9) {
+	.back-video {
+		width: auto;
+		height: 100%;
+	}
 }
 
 :root {
@@ -294,7 +294,6 @@ main {
 	margin-left: 200px;
 	height: 100px;
 	width: 700px;
-
 	display: grid;
 	text-align: auto;
 	vertical-align: auto;
@@ -318,6 +317,7 @@ table {
 }
 
 @media only screen and (max-width: 1200px) {
+	
 	.sidebar {
 		width: 90px;
 	}

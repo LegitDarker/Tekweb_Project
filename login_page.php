@@ -28,7 +28,7 @@ if (isset($_POST['buttonlogin'])) {
     <script src="jquery-3.6.1.js" type="text/javascript"></script>
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="webcss.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body{font: 14px sans-serif; }
         .wrapper{width:360px; padding: 20px; margin:0 auto}
