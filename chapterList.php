@@ -24,9 +24,11 @@ if (!isset ($_SESSION["username"])){
             height: 300px;
         }
         .main-content{
+
             text-align: center;
-            background: black;
+            background: #2D033B;
             height: 140vh;
+            margin-top: 95px    ;
         }
         #table{
             height: 50%;
@@ -36,11 +38,12 @@ if (!isset ($_SESSION["username"])){
             margin-left: 30%;
         }
         #button1{
-
+            background-color: #E5B8F4;
             height: 100px;
             width: 300px;
         }
         #button2{
+            background-color: #E5B8F4;
             margin-left: 20%;
             height: 100px;
             width: 300px;
@@ -57,10 +60,35 @@ if (!isset ($_SESSION["username"])){
         .tableComic{
             color: blue;
             margin-top: 30px;
+            max-height: 300px;
+            overflow-y: scroll;
         }
         #eps{
-            color: blue ;
+            color: #C147E9 ;
         }
+        #buttonBaca{
+            overflow: hidden;
+            color: white;
+            background-color: #E5B8F4;
+            border-radius: 30px;
+            transition-duration: 0.4s;
+
+        }
+        #buttonBaca:hover{
+            background-color: #B2B2B2;
+            color: white;    
+        }
+        table{
+            background-color: #810CA8;
+            
+        }
+        td{
+            font-family: 'Chivo Mono';
+        }
+        h4,h2{
+            font-family: 'Chivo Mono';
+        }
+
      
 </style>
 <title></title>
@@ -70,6 +98,7 @@ if (!isset ($_SESSION["username"])){
 <link rel="stylesheet" href="webcss.css">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 <body>
@@ -129,7 +158,7 @@ if (!isset ($_SESSION["username"])){
     
         <div id="logo">
             <img id="img1" src="img/eps5/Comic5_041.jpg">
-            <table class="table table-sm table-dark" id="table">
+            <table class="table table-sm table-bordered" id="table">
             <tbody>
                 <tr>
                     <td>Judul</td>
@@ -171,9 +200,11 @@ if (!isset ($_SESSION["username"])){
         <div class="content2">
             <div class="container2">
                 <div class="buttonTop">
-                    <button type="button" class="btn btn-outline-primary" id="button1"><h4>Chapter Awal</h4>
+                    <a href="view.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
                         <h2>Chapter 01</h2></button>
+                    </a>
                 </div>
+
 
                 <button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
                 <h2>Chapter 14</h2></button>
@@ -182,22 +213,66 @@ if (!isset ($_SESSION["username"])){
 
 
         <div class="tableComic">
-            <table class="table table-hover table-dark">
+            <table class="table table-hover table-bordered">
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td id="eps">Episode1</td>
-                    <td>btn</td>
+                    <th scope="row" width="100px">1</th>
+                    <td id="eps" width="400px">Episode1</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td id="eps">Jacob</td>
-                    <td>btn</td>
+                    <td id="eps">Episode2</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td id="eps">Larry the Bird</td>
-                    <td>btn</td>
+                    <td id="eps">Episode3</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">4</th>
+                    <td id="eps">Episode4</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">5</th>
+                    <td id="eps">Episode5</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">6</th>
+                    <td id="eps">Episode6</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">7</th>
+                    <td id="eps">Episode7</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">8</th>
+                    <td id="eps">Episode8</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">9</th>
+                    <td id="eps">Episode9</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">10</th>
+                    <td id="eps">Episode10</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">11</th>
+                    <td id="eps">Episode12</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">13</th>
+                    <td id="eps">Episode13</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">14</th>
+                    <td id="eps">Episode14</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                </tr>
+                <th scope="row">3</th>
+                    <td id="eps">Episode3</td>
+                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
             </tbody>
             </table>
