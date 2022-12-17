@@ -4,12 +4,20 @@ require "connection.php";
 if (!isset ($_SESSION["username"])){
     header("location: login_page.php");
 }
+if (isset($_POST['buttoneps'])){
+        $but=$_POST['button1'];
+        echo $but;
+        exit;
+    }
 ?>
+
 
 
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="jquery-3.6.1.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
 <style>
         #foto{
             height: 200px;
@@ -99,6 +107,7 @@ if (!isset ($_SESSION["username"])){
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <body>
@@ -200,7 +209,7 @@ if (!isset ($_SESSION["username"])){
         <div class="content2">
             <div class="container2">
                 <div class="buttonTop">
-                    <a href="view.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
+                    <a href="viewEpisode.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
                         <h2>Chapter 01</h2></button>
                     </a>
                 </div>
@@ -270,15 +279,37 @@ if (!isset ($_SESSION["username"])){
                     <td id="eps">Episode14</td>
                     <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
-                <th scope="row">3</th>
-                    <td id="eps">Episode3</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
-                </tr>
             </tbody>
             </table>
         </div>
+       
+
     
 </div>
 
 </div>
+<script>
+    $(document).ready(function(){
+            $("#buttonBaca").click(function(){   
+                button=$("#buttonBaca").val();
+                $.ajax({
+                    url: "chapterList.php",
+                    type: "POST",
+                    async:true,
+                    data:
+                        {
+                            buttoneps:1,
+                            button1: button
+                        },
+                    success: function(result)
+                    {
+                            $("#hasil").text(result);
+                    }
+                });
+                    
+            });
+
+        });
+
+</script>
 </body>
