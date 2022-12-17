@@ -2,7 +2,7 @@
 session_start();
 require "connection.php";
 if (!isset ($_SESSION["username"])){
-    header("location: login.php");
+    header("location: login_page.php");
 }
 ?>
 
@@ -48,7 +48,7 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_about.php"><span class="las la-address-book"> </span>
+                    <a href="view_contact.php"><span class="las la-address-book"> </span>
                     <span>About Us</span>
                     </a>
                 </li>
@@ -72,7 +72,7 @@ if (!isset ($_SESSION["username"])){
             </h1>
 
             <div class="user-wrapper">
-                <img src="Image files/User/user.png" width="40px" height="40px" alt="">
+                <img src="img/User/user.png" width="40px" height="40px" alt="">
                 <div>
                     <h4><?php echo  $_SESSION["username"]; ?></h4>
                     <small>User</small>
@@ -85,6 +85,7 @@ if (!isset ($_SESSION["username"])){
                 <a href="setImage.php">
                     <div class="card-body">
                         <img class="card-img-top" src="img/User/user.png" alt="Card image cap" style="height: 200px; width: 200px; margin-left: 300px;">
+                        <h5 class="card-title">Set Image</h5>
                     </div>
                 </a>
                 <ul class="list-group list-group-flush">
