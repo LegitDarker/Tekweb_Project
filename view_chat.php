@@ -73,7 +73,7 @@ if (!isset ($_SESSION["username"])){
             </h1>
 
             <div class="user-wrapper">
-                <img src="Image files/User/user.png" width="40px" height="40px" alt="">
+                <img src="img/User/user.png" width="40px" height="40px" alt="">
                 <div>
                     <h4><?php echo  $_SESSION["username"]; ?></h4>
                     <small>User</small>
@@ -81,8 +81,31 @@ if (!isset ($_SESSION["username"])){
             </div>
         </header>
 
+
         <main>
-            
+            <h1 style="margin-left: 40px; margin-top:30px; margin-bottom: -50px; color: #2fddb2"><b>Send an email to the Author!<b></h1>
+            <div class="recent-grid" style="margin-bottom: -23px; margin-left:30px">
+                <div class="card">
+                    <form action="send.php" method="post">
+                        <div class="card-header" style="padding-top: 50px">
+                            <h2 style="margin-left:20px">Subject </h2>
+
+                            <input type="text" name="subject" value="" placeholder="Subject of email" class=" form-control"
+                            style="width: 300px; margin-right:600px; padding-left: 1rem; margin-left: 30px">
+                        </div>
+                        
+                        <div class="continue-card" style="margin-left:50px; margin-right: 50px; margin-top: 30px; margin-bottom: 30px;">
+                            <textarea rows = "9" cols = "60" name = "message" placeholder="Type in your message here..." class="form-control"
+                            style="overflow: auto hidden; box-sizing: border-box;"></textarea>
+                        </div>
+
+                        <button type="submit" name="send" id="save" class="btn btn-lg" style="background: white; color: #2fddb2;
+                        margin-left: 160px; margin-top: -20px; margin-bottom: 30px">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
         </main>
     </div>
 
