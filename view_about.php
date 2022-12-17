@@ -49,7 +49,7 @@ if (!isset ($_SESSION["username"])){
 
                 <li>
                     <a href="" class="active"><span class="las la-address-book"> </span>
-                    <span>Contact Us</span>
+                    <span>About Us</span>
                     </a>
                 </li>
 

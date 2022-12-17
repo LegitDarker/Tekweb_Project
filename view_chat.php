@@ -10,6 +10,7 @@ if (!isset ($_SESSION["username"])){
 <html>
 <head>
     <title></title>
+    <script src="jquery-3.6.1.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="webcss.css">
@@ -48,8 +49,8 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_contact.php"><span class="las la-address-book"> </span>
-                    <span>Contact Us</span>
+                    <a href="view_about.php"><span class="las la-address-book"> </span>
+                    <span>About Us</span>
                     </a>
                 </li>
 
@@ -81,6 +82,7 @@ if (!isset ($_SESSION["username"])){
         </header>
 
         <main>
+            
         </main>
     </div>
 

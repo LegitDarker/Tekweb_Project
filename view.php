@@ -48,8 +48,8 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_contact.php"><span class="las la-address-book"> </span>
-                    <span>Contact Us</span>
+                    <a href="view_about.php"><span class="las la-address-book"> </span>
+                    <span>About Us</span>
                     </a>
                 </li>
 
