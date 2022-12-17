@@ -81,6 +81,23 @@ if (!isset ($_SESSION["username"])){
         </header>
 
         <main>
+            <div class="card" style="padding: 50px;">
+                <a href="setImage.php">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/User/user.png" alt="Card image cap" style="height: 200px; width: 200px; margin-left: 300px;">
+                    </div>
+                </a>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
         </main>
     </div>
 
