@@ -43,7 +43,7 @@ if (isset($_POST['buttonlogin'])) {
             </video>
             </div>
 
-            <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black; opacity: 70%">
+            <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black; opacity: 90%">
                 <h2>Login</h2>
                 <p class="hint-text">Enter login details</p>
                 <div class="mb-3">
