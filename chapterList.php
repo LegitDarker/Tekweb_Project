@@ -195,7 +195,7 @@ if (isset($_POST['buttoneps'])){
         </h1>
 
         <div class="user-wrapper">
-            <img src="img/User/user.png" width="40px" height="40px" alt="" class="scale-animation">
+            <img src="img/image/<?php echo $_SESSION['file_image'] ?>" width="40px" height="40px" alt="" class="scale-animation">
             <div>
                 <h4><?php echo  $_SESSION["username"]; ?></h4>
                 <small>User</small>

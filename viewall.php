@@ -4,6 +4,13 @@ require "connection.php";
 if (!isset ($_SESSION["username"])){
     header("location: login_page.php");
 }
+else{
+    if (isset($_SESSION['showing'])) {
+        echo "";
+    }
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +26,8 @@ if (!isset ($_SESSION["username"])){
 
 
 <body>
+    <div id="isi"></div>
+
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -200,6 +209,55 @@ if (!isset ($_SESSION["username"])){
 
 
     </div>
+    
+
+<script>
+//javascript
+$(document).ready(function(){
+
+    //login
+    $('#save').click(function(){
+        var v_username=$('#username').val();
+        var v_password=$('#password').val();
+        $.ajax({
+            url     : "login_page.php",
+            type    : "POST",
+            async   : true,
+            data    : {
+                buttonlogin : 1,
+                username    : v_username,
+                password    : v_password
+            },
+            success : function(result){
+                if (result == "username atau password salah") {
+                    $('#error').html(result);
+                }
+                else{
+                    window.location.href=result;
+                }
+                
+            }
+        });
+    });
+
+    
+});
+function showview(){
+    $.ajax({
+        url     : "viewall.php",
+        type    : "POST",
+        asyn    : true,
+        data    : {
+            showing : 1
+        },
+        success : function(res){
+            $("#isi").html(res);
+        }
+    });
+}
+
+</script>
 
 
 </body>
+</html>
