@@ -84,7 +84,15 @@ if (!isset ($_SESSION["username"])){
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>21</h1>
+                        <h1>
+                            <?php
+                                $sql="Select * from user_history WHERE username = '".$_SESSION['username']."'";
+                                $res=mysqli_query($con,$sql);
+                                while($row=mysqli_fetch_array($res)){
+                                    echo "<td>".$row['like']."</td>";
+                                }
+                            ?>
+                        </h1>
                         <span>Likes</span>
                     </div>
                     <div>
@@ -94,7 +102,15 @@ if (!isset ($_SESSION["username"])){
 
                 <div class="card-single">
                     <div>
-                        <h1>11</h1>
+                        <h1>
+                            <?php
+                                $sql="Select * from user_history WHERE username = '".$_SESSION['username']."'";
+                                $res=mysqli_query($con,$sql);
+                                while($row=mysqli_fetch_array($res)){
+                                    echo "<td>".$row['comment']."</td>";
+                                }
+                            ?>
+                        </h1>
                         <span>Comments</span>
                     </div>
                     <div>
@@ -104,7 +120,15 @@ if (!isset ($_SESSION["username"])){
 
                 <div class="card-single">
                     <div>
-                        <h1>3</h1>
+                        <h1>
+                            <?php
+                                $sql="Select * from user_history WHERE username = '".$_SESSION['username']."'";
+                                $res=mysqli_query($con,$sql);
+                                while($row=mysqli_fetch_array($res)){
+                                    echo "<td>".$row['chapter_read']."</td>";
+                                }
+                            ?>
+                        </h1>
                         <span>Chapters read</span>
                     </div>
                     <div>
