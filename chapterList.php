@@ -14,17 +14,28 @@ if (isset($_POST['buttoneps'])){
 
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="jquery-3.6.1.js" type="text/javascript"></script>
     <script type="text/javascript"></script>
 <style>
+
         #foto{
             height: 200px;
             width: 200px;
             border-radius: 50%;
             margin: 0 auto;
         }
+
+        .brief{
+            color: whitesmoke;
+        }
+        .info{
+            margin-top: 20px;
+            color: white
+        }
+
         #img1{
             margin-top: 10px;
             margin-right: 70%;
@@ -107,7 +118,36 @@ if (isset($_POST['buttoneps'])){
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
-
+ <script>
+        $(document).ready(function(){
+        $("#click").change(function(){
+            $("#page-wrap").empty();
+            var mid=$("#click").val();
+            $.ajax({
+                type: "GET",
+                url: "site.php",
+                data :
+                {
+                id : mid
+                },
+                success: function(xml) {
+                    $(xml).find('site').each(function(){
+                        var id = $(this).attr('id');
+                        var title = $(this).find('title').text();
+                        var url = $(this).find('url').text();
+                        $('<div class="items" id="link_'+id+'"></div>').html('<h3><a href="'+url+'">'+title+'</a></h3>').appendTo('#page-wrap');
+                        $(this).find('desc').each(function(){
+                            var brief = $(this).find('brief').text();
+                            var long = $(this).find('long').text();
+                            $('<div class="brief"></div>').html(brief).appendTo('#link_'+id);
+                            $('<div class="long"></div>').html(long).appendTo('#link_'+id);
+                        });
+                    });
+                }
+            });
+        });
+    });
+     </script>
 </head>
 <body>
 <body>
@@ -278,6 +318,13 @@ if (isset($_POST['buttoneps'])){
             </tbody>
             </table>
         </div>
+         <div class="info">Berikut informasi tambahan untuk lebih mengetahui tentang author.</div><br>
+<select id="click">
+<option value="1">Instagram</option>
+<option value="2">Webtoon</option>
+</select>
+<div id="page-wrap">
+</div>
        
 
     
