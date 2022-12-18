@@ -2,38 +2,40 @@
 session_start();
 error_reporting(0);
 require "connection.php";
+$username=$_GET['upload'];
 
-
-// $msg = "";
+$msg = "";
 
 // If upload button is clicked ...
-if (isset($_POST['buttonupload'])) {
-	$username=$_POST['username'];
-	$filename = $_POST["uploadfile"];
+if (isset($_POST['upload'])) {
+	// $username=$_GET['usern'];
+	// $username=$_GET['upload'];
+	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
-	$folder = "img/image/".$filename;
+	$folder = "img/image/" . $filename;
+	echo ("<script LANGUAGE='JavaScript'>
+        window.alert('$username');
+        </script>");
+
+	// $db = mysqli_connect("localhost", "root", "", "comicwebsite");
 
 	// Get all the submitted data from the form
-	// $sql = "INSERT INTO user_data (file_image) VALUES ('$filename')";
-
-	// $sql1="SELECT * FROM user_data WHERE username='$username'";
-	// $sql="UPDATE user_data SET file_image='$filename' WHERE username='$username'";
+	// $sql = "INSERT INTO user_data (file_image) VALUES ('$filename') WHERE username='$username'";
+	$sql = "UPDATE user_data SET file_image='$filename' WHERE username='$username'";
 
 	// Execute query
-	// $result=mysqli_query($con, $sql);
+	mysqli_query($con, $sql);
 
 	// Now let's move the uploaded image into the folder: image
 	if (move_uploaded_file($tempname, $folder)) {
 		echo "<h3> Image uploaded successfully!</h3>";
+		header("location: view_account.php");
 	} else {
 		echo "<h3> Failed to upload image!</h3>";
 	}
 }
-if (isset($_POST['buttonback'])) {
-    $back=$_POST['back'];
-    if ($back) {
-        echo "view_account.php";
-    }
+if (isset($_POST['back'])) {
+    header("location: view_account.php");
     exit();
 }
 ?>
@@ -42,11 +44,9 @@ if (isset($_POST['buttonback'])) {
 <html>
 
 <head>
-	<script src="jquery-3.6.1.js" type="text/javascript"></script>
 	<title>Image Upload</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
         body{font: 14px sans-serif; }
         .wrapper{width:360px; padding: 20px; margin:0 auto}
@@ -64,79 +64,45 @@ if (isset($_POST['buttonback'])) {
             <div class="signin-box" style="margin-left: -120px; margin-top: 100px; color: white; background: black; opacity: 90%">
                 <h2>Upload Image</h2>
                 <div id="content">
-					<form method="POST" action="" enctype="multipart/form-data">
-						<div class="form-group">
-							<input class="form-control" type="file" id="uploadfile" name="uploadfile"/>
-							<div id="usern" value="<?php echo $_SESSION['username'] ?>"></div>
-						</div>
-						<div class="form-group">
-							<button class="btn btn-primary" type="submit" name="upload" id="upload">UPLOAD</button>
-							<button type="submit" name="back" id="back" class="btn" style="background: white; color: black; margin-left: 360px;">Back</button>
-						</div>
-					</form>
-				</div>
-				
+                	<form method="POST" action="" enctype="multipart/form-data">
+                		<div class="form-group">
+                			<input class="form-control" type="file" name="uploadfile" value="" />
+                		</div>
+                		<div class="form-group">
+                			<button class="btn btn-primary" type="submit" value="<?php echo $_GET['usern']; ?>" name="upload">UPLOAD</button>
+                			<button type="submit" name="back" id="back" class="btn" style="background: white; color: black; margin-left: 375px;">Back</button>
+                		</div>
+                	</form>
+                </div>
+
+
+
         </div>
     </div>
-<script>
-//javascript
-$(document).ready(function(){
+	<!-- <div id="content">
+		<form method="POST" action="" enctype="multipart/form-data">
+			<div class="form-group">
+				<input class="form-control" type="file" name="uploadfile" value="" />
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit" id="userna" value="<?php echo $_GET['usern']; ?>" name="upload">UPLOAD</button>
+			</div>
+		</form>
+	</div>
+	<div id="display-image">
+		<?php
+		$query = " select * from user_data ";
+		$result = mysqli_query($con, $query);
 
-    //save new username
-    $('#upload').click(function(){
-        var v_file=$('#uploadfile').val();
-        var v_user=$('#usern').val();
-        $.ajax({
-            url     : "set_image.php",
-            type    : "POST",
-            async   : true,
-            data    : {
-                buttonupload  : 1,
-                uploadfile    : v_file,
-                username	  : v_user
-            },
-            success : function(result){
-                // if (result == "username tidak valid") {
-                //     $('#error').html(result);
-                // }
-                // else{
-                //     window.location.href="view_account.php";
-                // }
-                if (result == "ok") {
-                	alert(result);
-                }
-                else if (result == "v_user") {
-                	alert("nice");
-                }
-                else{
-                	alert("ko");
-                }
-                // window.location.href="view_account.php";
-                
-            }
-        });
-    });
+		while ($data = mysqli_fetch_assoc($result)) {
+		?>
+			<img src="img/image/<?php echo $data['filename']; ?>">
 
-    //back
-    $('#back').click(function(){
-        var backk = true
-        $.ajax({
-            url     : "set_username.php",
-            type    : "POST",
-            async   : true,
-            data    : {
-                buttonback : 1,
-                back       : backk
-            },
-            success : function(result){
-                window.location.href=result;
-            }
-        });
-    });    
-});
+		<?php
+		}
+		?>
+	</div> -->
 
-</script>
-	
 </body>
 
 </html>
