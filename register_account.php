@@ -14,9 +14,20 @@ if(mysqli_num_rows($sql) > 0)
 }
 else if (isset($_POST['save']))
 {
-    $sql="INSERT INTO user_data VALUES('$username', '$email','$password','$file_image')";
-    $query=mysqli_query($con, $sql);
-    header ("Location: login_page.php?status=success");
+    if ($username=="" || $email=="" || $password=="") 
+    {
+        echo ("<script LANGUAGE='JavaScript'>
+            window.alert('Isi tidak boleh kosong!');
+            window.location.href='register_page.php';
+            </script>");
+    }
+    else
+    {
+        $sql="INSERT INTO user_data VALUES('$username', '$email','$password','$file_image')";
+        $query=mysqli_query($con, $sql);
+        header ("Location: login_page.php?status=success");
+    }
+    
 }
 
 
