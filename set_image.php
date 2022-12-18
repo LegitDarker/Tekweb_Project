@@ -2,25 +2,17 @@
 session_start();
 error_reporting(0);
 require "connection.php";
-$username=$_GET['upload'];
+$username=$_GET['usern'];
 
 $msg = "";
 
 // If upload button is clicked ...
 if (isset($_POST['upload'])) {
-	// $username=$_GET['usern'];
-	// $username=$_GET['upload'];
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
 	$folder = "img/image/" . $filename;
-	echo ("<script LANGUAGE='JavaScript'>
-        window.alert('$username');
-        </script>");
-
-	// $db = mysqli_connect("localhost", "root", "", "comicwebsite");
 
 	// Get all the submitted data from the form
-	// $sql = "INSERT INTO user_data (file_image) VALUES ('$filename') WHERE username='$username'";
 	$sql = "UPDATE user_data SET file_image='$filename' WHERE username='$username'";
 
 	// Execute query
@@ -69,7 +61,7 @@ if (isset($_POST['back'])) {
                 			<input class="form-control" type="file" name="uploadfile" value="" />
                 		</div>
                 		<div class="form-group">
-                			<button class="btn btn-primary" type="submit" value="<?php echo $_GET['usern']; ?>" name="upload">UPLOAD</button>
+                			<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
                 			<button type="submit" name="back" id="back" class="btn" style="background: white; color: black; margin-left: 375px;">Back</button>
                 		</div>
                 	</form>
@@ -102,6 +94,38 @@ if (isset($_POST['back'])) {
 		}
 		?>
 	</div> -->
+
+<script>
+//javascript
+$(document).ready(function(){
+
+    //save new username
+    $('#save').click(function(){
+        var v_username=$('#username').val();
+        var v_newusern=$('#newusern').val();
+        $.ajax({
+            url     : "set_username.php",
+            type    : "POST",
+            async   : true,
+            data    : {
+                buttonsave  : 1,
+                username    : v_username,
+                newusern    : v_newusern
+            },
+            success : function(result){
+                if (result == "username tidak valid") {
+                    $('#error').html(result);
+                }
+                else{
+                    window.location.href="view_account.php";
+                }
+                
+            }
+        });
+    });
+
+
+</script>
 
 </body>
 

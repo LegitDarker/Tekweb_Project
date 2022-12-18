@@ -72,7 +72,7 @@ if (!isset ($_SESSION["username"])){
             </h1>
 
             <div class="user-wrapper">
-                <img src="img/User/user.png" width="40px" height="40px" alt="">
+                <img src="img/image/<?php echo $_SESSION['file_image'] ?>" width="40px" height="40px" alt="">
                 <div>
                     <h4><?php echo  $_SESSION["username"]; ?></h4>
                     <small>User</small>
@@ -82,7 +82,7 @@ if (!isset ($_SESSION["username"])){
 
         <main>
             <div class="card">
-                <a href="set_image.php?usern='<?php echo $_SESSION['username']; ?>'">
+                <a href="set_image.php?usern=<?php echo $_SESSION['username']; ?>">
                     <div class="card-body">
                         <img class="card-img-top" src="img/image/<?php echo $_SESSION['file_image'] ?>" alt="Card image cap" style="height: 25%; width: 25%; position: relative; top: 50%; left: 35%;">
                         <h5 class="card-title" style="color: black;">Set Image</h5>
