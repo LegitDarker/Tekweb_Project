@@ -29,11 +29,11 @@ if (isset($_POST['buttoneps'])){
         }
 
         .brief{
-            color: whitesmoke;
+            color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,213,212,1) 0%, rgba(113,240,128,1) 0%, rgb(47, 221, 178) 100%);
         }
         .info{
             margin-top: 20px;
-            color: white
+            color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,213,212,1) 0%, rgba(113,240,128,1) 0%, rgb(47, 221, 178) 100%);
         }
 
         #img1{
@@ -140,7 +140,6 @@ if (isset($_POST['buttoneps'])){
                             var brief = $(this).find('brief').text();
                             var long = $(this).find('long').text();
                             $('<div class="brief"></div>').html(brief).appendTo('#link_'+id);
-                            $('<div class="long"></div>').html(long).appendTo('#link_'+id);
                         });
                     });
                 }
