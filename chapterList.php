@@ -146,7 +146,7 @@ if (isset($_POST['buttoneps'])){
         </ul>
     </div>
 </div>
-<div class="main-content">
+<div class="main-content" style="background: white">
     <header>
         <h1>
             <label for="nav-toggle">
@@ -156,7 +156,7 @@ if (isset($_POST['buttoneps'])){
         </h1>
 
         <div class="user-wrapper">
-            <img src="img/User/user.png" width="40px" height="40px" alt="">
+            <img src="img/User/user.png" width="40px" height="40px" alt="" class="scale-animation">
             <div>
                 <h4><?php echo  $_SESSION["username"]; ?></h4>
                 <small>User</small>
@@ -165,9 +165,9 @@ if (isset($_POST['buttoneps'])){
     </header>
     
     
-        <div id="logo">
-            <img id="img1" src="img/eps5/Comic5_041.jpg">
-            <table class="table table-sm table-bordered" id="table">
+        <div id="logo card-single">
+            <img id="img1" src="img/eps5/Comic5_041.jpg" style="margin-top: 50px" class="scale-animation">
+            <table class="table table-sm table-bordered scale-animation" id="table" style="background: white">
             <tbody>
                 <tr>
                     <td>Judul</td>
@@ -191,86 +191,88 @@ if (isset($_POST['buttoneps'])){
                 </tr>
                 <tr>
                     <td>Grafis</td>
-                    <td>Shounen?</td>
+                    <td>Shounen</td>
                 </tr>
                 <tr>
                     <td>Tema</td>
-                    <td>Action?</td>
+                    <td>Action</td>
                 </tr>
                 <tr>
                     <td>Jenis Komik</td>
-                    <td>?</td>
+                    <td>Fiksi</td>
                 </tr>
             </tbody>
             </table>
-
         </div>
 
-        <div class="content2">
+        <div class="content2" >
             <div class="container2">
                 <div class="buttonTop">
-                    <a href="episodeView/chapter1.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
+                    <a href="episodeView/chapter1.php"><button type="button" class="btn scale-animation" id="button1" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,213,212,1) 0%, rgba(113,240,128,1) 0%, rgb(47, 221, 178) 100%);
+                    color:white"><h4>Chapter Awal</h4>
                         <h2>Chapter 01</h2></button>
                     </a>
                 </div>
 
 
-                <a href="episodeView/chapter11.php"><button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
+                <a href="episodeView/chapter11.php"><button type="button" class="btn scale-animation" id="button2" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,213,212,1) 0%, rgba(113,240,128,1) 0%, rgb(47, 221, 178) 100%);
+                color:white"><h4>Chapter Baru</h4>
                 <h2>Chapter 11</h2></button>
             </a>
             </div>
         </div>
 
 
-        <div class="tableComic">
-            <table class="table table-hover table-bordered">
+        <div class="tableComic scale-animation" style="margin-left: 60px; margin-right: 60px; height: 930px; margin-top: 50px">
+            <table class="table table-hover table-bordered" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,213,212,1) 0%, rgba(113,240,128,1) 0%, rgb(47, 221, 178) 100%);
+            color: white">
             <tbody>
                 <tr>
                     <th scope="row" width="100px">1</th>
-                    <td id="eps" width="400px">Episode1</td>
-                    <td><a href="episodeView/chapter1.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" width="400px" style="color:white">Episode1</td>
+                    <td><a href="episodeView/chapter1.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td id="eps">Episode2</td>
-                    <td><a href="episodeView/chapter2.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode2</td>
+                    <td><a href="episodeView/chapter2.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td id="eps">Episode3</td>
-                    <td><a href="episodeView/chapter3.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode3</td>
+                    <td><a href="episodeView/chapter3.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178)">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">4</th>
-                    <td id="eps">Episode4</td>
-                    <td><a href="episodeView/chapter4.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode4</td>
+                    <td><a href="episodeView/chapter4.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178)">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">5</th>
-                    <td id="eps">Episode5</td>
-                    <td><a href="episodeView/chapter5.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode5</td>
+                    <td><a href="episodeView/chapter5.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178)">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">6</th>
-                    <td id="eps">Episode6</td>
-                    <td><a href="episodeView/chapter6.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode6</td>
+                    <td><a href="episodeView/chapter6.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178)">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">7</th>
-                    <td id="eps">Episode7</td>
-                    <td><a href="episodeView/chapter7.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode7</td>
+                    <td><a href="episodeView/chapter7.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">8</th>
-                    <td id="eps">Episode8</td>
-                    <td><a href="episodeView/chapter8.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode8</td>
+                    <td><a href="episodeView/chapter8.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">9</th>
-                    <td id="eps">Episode9</td>
-                    <td><a href="episodeView/chapter9.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode9</td>
+                    <td><a href="episodeView/chapter9.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">10</th>
-                    <td id="eps">Episode10</td>
-                    <td><a href="episodeView/chapter10.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode10</td>
+                    <td><a href="episodeView/chapter10.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">11</th>
-                    <td id="eps">Episode11</td>
-                    <td><a href="episodeView/chapter11.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps" style="color:white">Episode11</td>
+                    <td><a href="episodeView/chapter11.php" class="btn" id="buttonBaca" style="background: white; color: rgb(47, 221, 178);">Mulai Baca</a></td>
                 </tr>
 
             </tbody>
