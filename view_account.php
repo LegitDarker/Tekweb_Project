@@ -48,7 +48,7 @@ if (!isset ($_SESSION["username"])){
                 </li>
 
                 <li>
-                    <a href="view_contact.php"><span class="las la-address-book"> </span>
+                    <a href="view_about.php"><span class="las la-address-book"> </span>
                     <span>About Us</span>
                     </a>
                 </li>
@@ -81,11 +81,12 @@ if (!isset ($_SESSION["username"])){
         </header>
 
         <main>
-            <div class="card" style="padding: 50px;">
-                <a href="set_image.php">
+            <div class="card">
+                <a href="set_image.php?username='<?php echo $_SESSION['username']; ?>'">
                     <div class="card-body">
-                        <img class="card-img-top" src="img/User/user.png" alt="Card image cap" style="height: 200px; width: 200px; margin-left: 300px;">
+                        <img class="card-img-top" src="img/image/<?php echo $_SESSION['file_image'] ?>" alt="Card image cap" style="height: 25%; width: 25%; position: relative; top: 50%; left: 35%;">
                         <h5 class="card-title" style="color: black;">Set Image</h5>
+                        <!-- <div value="<?php echo $_SESSION["username"]; ?>"></div> -->
                     </div>
                 </a>
                 <ul class="list-group list-group-flush">

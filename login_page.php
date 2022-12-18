@@ -11,6 +11,7 @@ if (isset($_POST['buttonlogin'])) {
         $_SESSION['username']=$row['username'];
         $_SESSION["password"]=$row['password'];
         $_SESSION['email']=$row['email'];
+        $_SESSION['file_image']=$row['file_image'];
         echo "view.php";
     }
     else
