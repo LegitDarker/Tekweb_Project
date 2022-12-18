@@ -89,22 +89,30 @@ if (!isset ($_SESSION["username"])){
                     </div>
 
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quae animi doloribus,
-                            architecto aut ducimus maiores quisquam nostrum 
-                            officia aliquid, magni in fuga nisi. Deserunt fugiat animi quia ex officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempora ipsum eaque, 
-                            molestias officiis culpa veritatis, sapiente tenetur quo incidunt omnis doloremque iusto 
-                            cum nesciunt unde dicta necessitatibus voluptate expedita.</p>
+                        <p>
+                            Halo, nama saya adalah Daniel Alexander, dan saya adalah pembuat dari komik pada website ini.
+                            Saya juga telah dibantu oleh kedua teman saya dalam pembuatan website ini, yakni Angelo Ricardo
+                            Clement dan juga Andreas George. Kami menggunakan waktu sekitar 1 bulan untuk membuat website ini,
+                            dengan pengalaman koding kami melalui mata kuliah Teknologi Website yang kami terima selama menjalankan
+                            perjalanan kuliah di Universitas Kristen Petra. Kami akan bahagia sekali untuk bisa menerima masukan
+                            agar website ini bisa menjadi jauh lebih baik lagi. Terima kasih atas perhatiannya!
+
+                            <br>
+                            <br>
+                            Support kami dalam media lain!
+                        </p>
                     </div>
 
                     <div class="social">
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://patreon.com/"><i class="fab fa-patreon"></i></a>
+                        <a href="https://paypal.com/"><i class="fab fa-paypal"></i></a>
                     </div>
                 </div>
 
-                <div class="image-section">
+                <div class="image-section" style="margin-top:50px">
                     <img src="img\man.jpg">
                 </div>
             <div>
