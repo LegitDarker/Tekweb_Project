@@ -209,14 +209,15 @@ if (isset($_POST['buttoneps'])){
         <div class="content2">
             <div class="container2">
                 <div class="buttonTop">
-                    <a href="viewEpisode.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
+                    <a href="episodeView/chapter1.php"><button type="button" class="btn btn-outline-primary" id="button1" ><h4>Chapter Awal</h4>
                         <h2>Chapter 01</h2></button>
                     </a>
                 </div>
 
 
-                <button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
-                <h2>Chapter 14</h2></button>
+                <a href="episodeView/chapter11.php"><button type="button" class="btn btn-outline-primary" id="button2"><h4>Chapter Baru</h4>
+                <h2>Chapter 11</h2></button>
+            </a>
             </div>
         </div>
 
@@ -227,58 +228,51 @@ if (isset($_POST['buttoneps'])){
                 <tr>
                     <th scope="row" width="100px">1</th>
                     <td id="eps" width="400px">Episode1</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter1.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td id="eps">Episode2</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter2.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td id="eps">Episode3</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter3.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">4</th>
                     <td id="eps">Episode4</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter4.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">5</th>
                     <td id="eps">Episode5</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter5.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">6</th>
                     <td id="eps">Episode6</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter6.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">7</th>
                     <td id="eps">Episode7</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter7.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">8</th>
                     <td id="eps">Episode8</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter8.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">9</th>
                     <td id="eps">Episode9</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter9.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">10</th>
                     <td id="eps">Episode10</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td><a href="episodeView/chapter10.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
                 <th scope="row">11</th>
-                    <td id="eps">Episode12</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
+                    <td id="eps">Episode11</td>
+                    <td><a href="episodeView/chapter11.php" class="btn" id="buttonBaca">Mulai Baca</a></td>
                 </tr>
-                <th scope="row">13</th>
-                    <td id="eps">Episode13</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
-                </tr>
-                <th scope="row">14</th>
-                    <td id="eps">Episode14</td>
-                    <td><a href="" class="btn" id="buttonBaca">Mulai Baca</a></td>
-                </tr>
+
             </tbody>
             </table>
         </div>
