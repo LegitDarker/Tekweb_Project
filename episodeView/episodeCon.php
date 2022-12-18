@@ -1,3 +1,3 @@
 <?php 
-$con = mysqli_connect('localhost', 'root', '', 'image');
+$con = mysqli_connect('localhost', 'root', '', 'comicwebsite');
 ?>
