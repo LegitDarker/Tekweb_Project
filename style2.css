@@ -1,0 +1,21 @@
+.buttonTop{
+	margin-left: 30%;
+	margin-top: 2%;
+}
+#button2{
+	margin-left: 20%;
+}
+#button3{
+	margin-left: 20%;
+}
+
+.wrapper{
+	margin: 0 auto;
+	padding-right: 15%;
+	background: #2D033B;
+	align-content: center;
+}
+.alb{
+	margin-left: 30%;
+	width: 20px;
+}
