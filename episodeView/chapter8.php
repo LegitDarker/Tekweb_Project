@@ -9,7 +9,7 @@ require "episodeCon.php";
 	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" style="background: white;">
 	<div class="container">
 	<?php 
 		$sql="SELECT * from episode8 ORDER BY id asc";

@@ -9,7 +9,7 @@ require "episodeCon.php";
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" style="background: white;">
 	<div class="container">
 	<?php 
 		$sql="SELECT * from episode1 ORDER BY id asc";
@@ -33,7 +33,7 @@ require "episodeCon.php";
             </a>
             </div>
         </div>
-</div>
+	</div>
 
 </body>
 </html>
