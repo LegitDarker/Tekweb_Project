@@ -3,6 +3,7 @@ require "connection.php";
 $username=$_POST['username'];
 $email=$_POST['email'];
 $password=$_POST['password'];
+$file_image=$_GET['fimg'];
 $sql=mysqli_query($con, "SELECT * FROM user_data WHERE username='$username'");
 if(mysqli_num_rows($sql) > 0)
 {
@@ -13,7 +14,7 @@ if(mysqli_num_rows($sql) > 0)
 }
 else if (isset($_POST['save']))
 {
-    $sql="INSERT INTO user_data VALUES('$username', '$email','$password')";
+    $sql="INSERT INTO user_data VALUES('$username', '$email','$password','$file_image')";
     $query=mysqli_query($con, $sql);
     header ("Location: login_page.php?status=success");
 }
