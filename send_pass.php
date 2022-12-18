@@ -30,7 +30,7 @@ if (isset($_POST['save'])) {
     $mail->Port = 465;
 
     $mail->setFrom('bacakomiktekweb@gmail.com');
-    $mail->addAddress('$email');
+    $mail->addAddress($_POST['email']);
     $mail->isHTML(true);
 
     $mail->Subject = "Your Password";
@@ -41,7 +41,7 @@ if (isset($_POST['save'])) {
     echo
     "
     <script>
-        alert('Your email has been sent successfully.');
+        alert('Your password has been sent successfully.');
         document.location.href = 'logout.php';
     </script>
     ";
