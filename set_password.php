@@ -95,7 +95,7 @@ if (isset($_POST['buttonback'])) {
                 </button>
             </div>
             <br>
-            <p><a href="#"> Forgot Password</a></p>
+            <p><a href="forgot_pass.php"> Forgot Password</a></p>
 
         </div>
     </div>
@@ -104,7 +104,7 @@ if (isset($_POST['buttonback'])) {
 //javascript
 $(document).ready(function(){
 
-    //save new username
+    //save new password
     $('#save').click(function(){
         var v_username=$('#username').val();
         var v_email=$('#email').val();
