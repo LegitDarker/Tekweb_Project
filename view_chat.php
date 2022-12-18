@@ -44,7 +44,7 @@ if (!isset ($_SESSION["username"])){
 
                 <li>
                     <a href="" class="active"><span class="lab la-rocketchat"> </span>
-                    <span>Chat</span>
+                    <span>Contact Author</span>
                     </a>
                 </li>
 
@@ -92,8 +92,6 @@ if (!isset ($_SESSION["username"])){
             <div class="recent-grid" style="margin-bottom: -23px; margin-left:30px">
                 <div class="card">
                     <form action="send.php" method="post">
-                        <text name="username" value="'{$_SESSION['username']}'"></text>
-
                         <div class="card-header" style="padding-top: 50px">
                             <h2 style="margin-left:20px" class="scale-animation">Subject </h2>
 

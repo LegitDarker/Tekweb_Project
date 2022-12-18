@@ -130,7 +130,7 @@ if (isset($_POST['buttoneps'])){
             </li>
             <li>
                 <a href="view_chat.php"><span class="lab la-rocketchat"></span>
-                <span>Chat</span>
+                <span>Contact Author</span>
                 </a>
             </li>
             <li>

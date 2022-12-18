@@ -44,7 +44,7 @@ if (!isset ($_SESSION["username"])){
 
                 <li>
                     <a href="view_chat.php"><span class="lab la-rocketchat"> </span>
-                    <span>Chat Author</span>
+                    <span>Contact Author</span>
                     </a>
                 </li>
 
