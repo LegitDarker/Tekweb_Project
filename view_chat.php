@@ -91,7 +91,7 @@ if (!isset ($_SESSION["username"])){
             
             <div class="recent-grid" style="margin-bottom: -23px; margin-left:30px">
                 <div class="card">
-                    <form action="send.php" method="post">
+                    <form action="send.php?username=<?php echo $_SESSION['username']; ?>" method="post">
                         <div class="card-header" style="padding-top: 50px">
                             <h2 style="margin-left:20px" class="scale-animation">Subject </h2>
 

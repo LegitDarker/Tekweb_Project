@@ -7,6 +7,8 @@ require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 if(isset($_POST["send"])) {
+    $username=$_GET['username'];
+    $msg=$_POST['message'];
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();
@@ -22,7 +24,7 @@ if(isset($_POST["send"])) {
     $mail->isHTML(true);
 
     $mail->Subject = $_POST["subject"];
-    $mail->Body = $_POST["message"];
+    $mail->Body =" FROM $username : $message";
 
     $mail->send();
 
