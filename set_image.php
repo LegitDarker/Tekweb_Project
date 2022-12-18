@@ -21,7 +21,7 @@ if (isset($_POST['upload'])) {
 	// Now let's move the uploaded image into the folder: image
 	if (move_uploaded_file($tempname, $folder)) {
 		echo "<h3> Image uploaded successfully!</h3>";
-		header("location: view_account.php");
+		header("location: logout.php");
 	} else {
 		echo "<h3> Failed to upload image!</h3>";
 	}
@@ -71,61 +71,6 @@ if (isset($_POST['back'])) {
 
         </div>
     </div>
-	<!-- <div id="content">
-		<form method="POST" action="" enctype="multipart/form-data">
-			<div class="form-group">
-				<input class="form-control" type="file" name="uploadfile" value="" />
-			</div>
-			<div class="form-group">
-				<button class="btn btn-primary" type="submit" id="userna" value="<?php echo $_GET['usern']; ?>" name="upload">UPLOAD</button>
-			</div>
-		</form>
-	</div>
-	<div id="display-image">
-		<?php
-		$query = " select * from user_data ";
-		$result = mysqli_query($con, $query);
-
-		while ($data = mysqli_fetch_assoc($result)) {
-		?>
-			<img src="img/image/<?php echo $data['filename']; ?>">
-
-		<?php
-		}
-		?>
-	</div> -->
-
-<script>
-//javascript
-$(document).ready(function(){
-
-    //save new username
-    $('#save').click(function(){
-        var v_username=$('#username').val();
-        var v_newusern=$('#newusern').val();
-        $.ajax({
-            url     : "set_username.php",
-            type    : "POST",
-            async   : true,
-            data    : {
-                buttonsave  : 1,
-                username    : v_username,
-                newusern    : v_newusern
-            },
-            success : function(result){
-                if (result == "username tidak valid") {
-                    $('#error').html(result);
-                }
-                else{
-                    window.location.href="view_account.php";
-                }
-                
-            }
-        });
-    });
-
-
-</script>
 
 </body>
 

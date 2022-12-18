@@ -95,7 +95,7 @@ $(document).ready(function(){
                     $('#error').html(result);
                 }
                 else{
-                    window.location.href="view_account.php";
+                    window.location.href="logout.php";
                 }
                 
             }
