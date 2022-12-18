@@ -34,7 +34,7 @@ if (isset($_POST['save'])) {
     $mail->isHTML(true);
 
     $mail->Subject = "Your Password";
-    $mail->Body = "$pass";
+    $mail->Body = "This is your password : $pass";
 
     $mail->send();
 
