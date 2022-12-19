@@ -26,7 +26,10 @@ if(isset($_POST["send"])) {
     $mail->Port = 465;
 
     $mail->setFrom('bacakomiktekweb2@gmail.com');
-    $mail->addAddress($emaill);
+
+    
+    // Masukkan email author disini
+    $mail->addAddress('d4niel.ap@gmail.com');
     $mail->isHTML(true);
 
     $mail->Subject = $_POST["subject"];
