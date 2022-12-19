@@ -1,5 +1,10 @@
 <?php 
+session_start();
 require "episodeCon.php";
+if (!isset ($_SESSION["username"])){
+    header("location: login_page.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +30,27 @@ require "episodeCon.php";
 	<?php } }?>
 	 <div class="buttonTop">
                     
-                <a href="#" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true"><h2>Prev Chapter</h2></a>
-                   
-               
+                <a href="#" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true"><h2>Prev Chapter</h2></a> 
+
+				<?php
+					$query = mysql_query("SELECT * FROM chapter_data WHERE id = '1'")
+
+					while ($row = mysqli_fetch_array($query)) { ?>
+						<?php
+							$result = mysql_query("SELECT * FROM likes WHERE username = '".$_SESSION['username']."' AND id=".$row['id']."");
+							if (mysql_num_rows($result) == 1) ?>
+								<!-- User sudah menyukai chapter -->
+								<span><a href="" class="unlike" id="<?php echo $row['id']; ?>">Unlike</a></span> 
+							<?php } else { ?>
+								
+							}
+						?>
+
+						<div class="like-button">
+							<span><a href="">like</a></span>
+						</div>
+
+					<?php } ?>
                 <a href="chapter2.php"><button type="button" class="btn btn-outline-primary" id="button2">
                 <h2>Next Chapter</h2></button>
             </a>
