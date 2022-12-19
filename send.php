@@ -20,8 +20,8 @@ if(isset($_POST["send"])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'bacakomiktekweb@gmail.com';
-    $mail->Password = 'dzokdjoyejzekaqe';
+    $mail->Username = 'bacakomiktekweb2@gmail.com';
+    $mail->Password = 'ypaabokrweliwgar';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
