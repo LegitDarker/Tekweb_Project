@@ -7,6 +7,7 @@ require "connection.php";
 <head>
 	<link rel="stylesheet" href="style2.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body>
 	<div class="wrapper" style="background: white;">
@@ -36,7 +37,7 @@ require "connection.php";
             </div>
 
             <a href="view.php"><button type="button" class="btn btn-outline-primary" id="button3">
-                <h2>HOME</h2></button>
+                <h2 class="las la-home"></h2></button>
             	</a>
 </div>
 </div>

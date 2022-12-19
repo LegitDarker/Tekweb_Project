@@ -144,11 +144,11 @@ if (!isset ($_SESSION["username"])){
                     <div class="card-header">
                         <h2>Recent Read Chapter</h2>
 
-                        <button href="chapterList.php">See all</button>
+                        <a href="chapterList.php" style="color:white" class="scale-animation"><button> See all </button></a>
                     </div>
 
                     <div class="continue-card">
-                        <button href="chapter1.php">Continue!</button>
+                        <a href="chapter1.php" style="color:white"><button> Continue! </button></a>
                     </div>
                 </div>
             </div>
