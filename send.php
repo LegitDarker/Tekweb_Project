@@ -1,4 +1,5 @@
 <?php
+require "connection.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -9,6 +10,11 @@ require 'phpmailer/src/SMTP.php';
 if(isset($_POST["send"])) {
     $username=$_GET['username'];
     $msg=$_POST['message'];
+    $sql=mysqli_query($con,"SELECT * FROM user_data WHERE username='$username'");
+    $row=mysqli_fetch_array($sql);
+    if (is_array($row)) {
+        $emaill=$row['email'];
+    }
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();
@@ -23,8 +29,8 @@ if(isset($_POST["send"])) {
     $mail->addAddress('d4niel.ap@gmail.com');
     $mail->isHTML(true);
 
-    $mail->Subject = $_POST["subject"];
-    $mail->Body =" FROM $username : $msg";
+    $mail->Subject = $_POST["subject "];
+    $mail->Body ="FROM $username : $msg";
 
     $mail->send();
 
