@@ -24,12 +24,12 @@ if (isset($_POST['save'])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'bacakomiktekweb@gmail.com';
-    $mail->Password = 'dzokdjoyejzekaqe';
+    $mail->Username = 'bacakomiktekweb2@gmail.com';
+    $mail->Password = 'ypaabokrweliwgar';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('bacakomiktekweb@gmail.com');
+    $mail->setFrom('bacakomiktekweb2@gmail.com');
     $mail->addAddress($_POST['email']);
     $mail->isHTML(true);
 

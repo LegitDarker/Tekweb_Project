@@ -20,16 +20,16 @@ if(isset($_POST["send"])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'bacakomiktekweb@gmail.com';
-    $mail->Password = 'dzokdjoyejzekaqe';
+    $mail->Username = 'bacakomiktekweb2@gmail.com';
+    $mail->Password = 'ypaabokrweliwgar';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('bacakomiktekweb@gmail.com');
-    $mail->addAddress('d4niel.ap@gmail.com');
+    $mail->setFrom('bacakomiktekweb2@gmail.com');
+    $mail->addAddress($emaill);
     $mail->isHTML(true);
 
-    $mail->Subject = $_POST["subject "];
+    $mail->Subject = $_POST["subject"];
     $mail->Body ="FROM $username : $msg";
 
     $mail->send();
