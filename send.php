@@ -27,9 +27,9 @@ if(isset($_POST["send"])) {
 
     $mail->setFrom('bacakomiktekweb2@gmail.com');
 
-    
+
     // Masukkan email author disini
-    $mail->addAddress('d4niel.ap@gmail.com');
+    $mail->addAddress('daniel.ap@gmail.com');
     $mail->isHTML(true);
 
     $mail->Subject = $_POST["subject"];
