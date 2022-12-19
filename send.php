@@ -24,7 +24,7 @@ if(isset($_POST["send"])) {
     $mail->isHTML(true);
 
     $mail->Subject = $_POST["subject"];
-    $mail->Body =" FROM $username : $message";
+    $mail->Body =" FROM $username : $msg";
 
     $mail->send();
 
