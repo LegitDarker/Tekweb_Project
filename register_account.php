@@ -21,9 +21,14 @@ else if (isset($_POST['save']))
             window.location.href='register_page.php';
             </script>");
     }
+
     else
     {
         $sql="INSERT INTO user_data VALUES('$username', '$email','$password','$file_image')";
+        $query=mysqli_query($con, $sql);
+        header ("Location: login_page.php?status=success");
+
+        $sql="INSERT INTO user_history VALUES('$username', '0','0','0')";
         $query=mysqli_query($con, $sql);
         header ("Location: login_page.php?status=success");
     }
